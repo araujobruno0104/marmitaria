@@ -32,14 +32,19 @@ z-index:-1;
 
 header{
 text-align:center;
-padding:30px;
-background:#111;
+padding:40px 20px;
 color:white;
 }
 
+header h1{
+font-size:34px;
+font-weight:bold;
+}
+
 header p{
-opacity:0.7;
+opacity:0.9;
 margin-top:5px;
+font-size:18px;
 }
 
 .marmitas{
@@ -52,16 +57,18 @@ padding:30px;
 
 .card{
 background:white;
-border-radius:12px;
+border-radius:15px;
 width:280px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
 text-align:center;
 padding-bottom:20px;
 transition:0.3s;
+overflow:hidden;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,0.25);
 }
 
 .card img{
@@ -76,24 +83,26 @@ margin:15px 0;
 }
 
 .preco{
-font-size:22px;
+font-size:24px;
 font-weight:bold;
-color:#27ae60;
+color:#e67e22;
 margin-bottom:15px;
 }
 
 button{
 background:#25D366;
 border:none;
-padding:12px 20px;
+padding:14px 25px;
 color:white;
 font-size:16px;
-border-radius:8px;
+border-radius:30px;
 cursor:pointer;
+transition:0.3s;
 }
 
 button:hover{
 background:#1ebe5d;
+transform:scale(1.05);
 }
 
 .cardapio{
@@ -157,5 +166,6 @@ transition:0.2s;
 transform:translateX(5px);
 background:#fff8e6;
 }
+
 
 
