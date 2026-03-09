@@ -2,144 +2,97 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+font-family: Arial, Helvetica, sans-serif;
 }
 
 body{
 background:#e8dcc8;
+display:block;
 }
 
-/* CONTAINER */
+/* CONTAINER PRINCIPAL */
 
 .container{
+width:100%;
 max-width:420px;
-margin:auto;
+margin:0 auto;
 padding-bottom:40px;
 }
 
 /* HEADER */
 
 .topo{
-
 background:#8b1e1e;
 color:white;
-
 text-align:center;
-
 padding:20px;
-
-box-shadow:0 4px 10px rgba(0,0,0,0.2);
-
 }
 
-/* CARD */
+/* CARDS */
 
 .card{
-
 background:#f5efe5;
-
-margin:20px;
-
+margin:20px 10px;
 padding:20px;
-
 border-radius:15px;
-
 box-shadow:0 6px 15px rgba(0,0,0,0.2);
-
 }
 
-/* FOTO */
+/* IMAGEM */
 
 .foto{
-
 width:100%;
-
 border-radius:10px;
-
 margin:10px 0;
-
 }
 
 /* LISTA */
 
 ul{
-
 margin-top:10px;
-
 padding-left:20px;
-
 }
 
 li{
-
 margin-bottom:6px;
-
 font-size:18px;
-
 }
 
 /* TAMANHOS */
 
-.tamanhos .linha{
-
+.linha{
 display:flex;
-
 justify-content:space-between;
-
-padding:12px;
-
+padding:12px 0;
 border-bottom:1px solid #ddd;
-
 font-size:18px;
-
 }
 
-.tamanhos b{
-
+.linha b{
 color:#8b1e1e;
-
 }
 
 /* BOTÃO */
 
 .botao{
-
 display:block;
-
-margin:20px;
-
+margin:20px 10px;
 background:#2e7d32;
-
 color:white;
-
 padding:15px;
-
 text-align:center;
-
 border-radius:10px;
-
 text-decoration:none;
-
 font-size:18px;
-
 font-weight:bold;
-
-box-shadow:0 5px 10px rgba(0,0,0,0.3);
-
 }
 
 /* FOOTER */
 
 footer{
-
 text-align:center;
-
 margin-top:10px;
-
 font-size:14px;
-
 opacity:0.7;
-
-padding-bottom:20px;
-
+padding-bottom:30px;
 }
