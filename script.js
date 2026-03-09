@@ -1,22 +1,30 @@
-const sheetID = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS2Hrk6JB9O2XjayjzREDISWzAf_lSxUm5vtiyES8oXK97ge9iocYqqhNgIu1pkh5NkEA724gI6HKLb/pub?output=csv"
-
-const url = `https://opensheet.elk.sh/${sheetID}/1`
+const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS2Hrk6JB9O2XjayjzREDISWzAf_lSxUm5vtiyES8oXK97ge9iocYqqhNgIu1pkh5NkEA724gI6HKLb/pub?output=csv";
 
 fetch(url)
-.then(res => res.json())
-.then(data => {
+.then(response => response.text())
+.then(csv => {
 
-const lista = document.getElementById("cardapio")
+const linhas = csv.split("\n");
 
-data.forEach(item => {
+const lista = document.getElementById("cardapio");
 
-const li = document.createElement("li")
+linhas.forEach((linha,i)=>{
 
-li.textContent = item.item
+if(i === 0) return;
 
-lista.appendChild(li)
+const item = linha.trim();
 
-})
+if(item){
 
-})
+const li = document.createElement("li");
+
+li.textContent = item;
+
+lista.appendChild(li);
+
+}
+
+});
+
+});
 
