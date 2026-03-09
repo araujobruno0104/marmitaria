@@ -1,25 +1,22 @@
-const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS2Hrk6JB9O2XjayjzREDISWzAf_lSxUm5vtiyES8oXK97ge9iocYqqhNgIu1pkh5NkEA724gI6HKLb/pub?output=csv";
+const sheetID = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS2Hrk6JB9O2XjayjzREDISWzAf_lSxUm5vtiyES8oXK97ge9iocYqqhNgIu1pkh5NkEA724gI6HKLb/pub?output=csv"
+
+const url = `https://opensheet.elk.sh/${sheetID}/1`
 
 fetch(url)
-.then(res => res.text())
+.then(res => res.json())
 .then(data => {
 
-const linhas = data.split("\n");
+const lista = document.getElementById("cardapio")
 
-let html = "";
+data.forEach(item => {
 
-// começa do 1 para pular o cabeçalho
-for(let i = 1; i < linhas.length; i++){
+const li = document.createElement("li")
 
-const item = linhas[i].trim();
+li.textContent = item.item
 
-if(item !== ""){
-html += `<p>• ${item}</p>`;
-}
+lista.appendChild(li)
 
-}
+})
 
-document.getElementById("cardapio-lista").innerHTML = html;
-
-});
+})
 
