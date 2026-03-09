@@ -2,20 +2,28 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial;
+font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-margin:0;
 min-height:100vh;
-font-family:Arial, Helvetica, sans-serif;
 
-background: linear-gradient(135deg, #2c2c2c, #4a4a4a);
+background: linear-gradient(
+160deg,
+#0f0f0f,
+#2a2a2a,
+#3a3a3a
+);
 
 display:flex;
 flex-direction:column;
 align-items:center;
+
+padding-top:90px;
 }
+
+/* luz suave no fundo */
+
 body::before{
 content:"";
 position:fixed;
@@ -24,128 +32,173 @@ left:0;
 width:100%;
 height:100%;
 
-background: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.2), transparent 40%),
-radial-gradient(circle at 80% 70%, rgba(255,255,255,0.15), transparent 40%);
+background:
+radial-gradient(circle at 20% 30%, rgba(255,255,255,0.08), transparent 40%),
+radial-gradient(circle at 80% 70%, rgba(255,255,255,0.05), transparent 40%);
 
 z-index:-1;
 }
 
+/* HEADER PREMIUM */
+
 header{
-text-align:center;
-padding:40px 20px;
-color:white;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+
+padding:18px 40px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background: rgba(20,20,20,0.85);
+backdrop-filter: blur(10px);
+
+border-bottom:1px solid rgba(255,255,255,0.08);
+
+z-index:1000;
 }
 
 header h1{
-font-size:34px;
-font-weight:bold;
+color:white;
+font-size:26px;
+letter-spacing:1px;
 }
 
-header p{
-opacity:0.9;
-margin-top:5px;
-font-size:18px;
-}
+/* CONTAINER MARMITAS */
 
 .marmitas{
 display:flex;
-flex-wrap:wrap;
 justify-content:center;
-gap:20px;
-padding:30px;
+flex-wrap:wrap;
+
+gap:35px;
+
+max-width:1000px;
+
+margin:auto;
+
+padding:40px 20px;
 }
 
+/* CARD MARMITAS */
+
 .card{
-background:white;
-border-radius:15px;
-width:280px;
-box-shadow:0 10px 25px rgba(0,0,0,0.2);
-text-align:center;
-padding-bottom:20px;
-transition:0.3s;
+background: linear-gradient(145deg,#ffffff,#f1f1f1);
+
+border-radius:25px;
+
+width:260px;
+
+padding-bottom:25px;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,0.25),
+0 20px 60px rgba(0,0,0,0.35);
+
+transition: all .35s ease;
+
 overflow:hidden;
+
+text-align:center;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 15px 35px rgba(0,0,0,0.25);
+transform:translateY(-12px) scale(1.03);
+
+box-shadow:
+0 25px 60px rgba(0,0,0,0.45);
 }
+
+/* IMAGEM */
 
 .card img{
 width:100%;
-height:180px;
+height:170px;
 object-fit:cover;
-border-radius:12px 12px 0 0;
+
+border-radius:25px 25px 0 0;
 }
+
+/* TITULO */
 
 .card h2{
-margin:15px 0;
+margin:18px 0 10px 0;
 }
 
+/* PREÇO */
+
 .preco{
-font-size:24px;
-font-weight:bold;
-color:#e67e22;
+font-size:26px;
+font-weight:700;
+
+background: linear-gradient(90deg,#ff7a18,#ffb347);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
 margin-bottom:15px;
 }
 
+/* BOTÃO WHATSAPP */
+
 button{
-background:#25D366;
+background: linear-gradient(135deg,#25D366,#1ebe5d);
+
 border:none;
-padding:14px 25px;
+
+padding:14px 30px;
+
+border-radius:50px;
+
+font-weight:600;
+
+letter-spacing:.3px;
+
 color:white;
-font-size:16px;
-border-radius:30px;
+
 cursor:pointer;
-transition:0.3s;
+
+box-shadow:0 8px 20px rgba(37,211,102,0.35);
+
+transition:.3s;
 }
 
 button:hover{
-background:#1ebe5d;
-transform:scale(1.05);
+transform:scale(1.08);
+
+box-shadow:0 10px 30px rgba(37,211,102,0.5);
 }
+
+/* CARDÁPIO */
 
 .cardapio{
-background:white;
-margin:40px auto;
+background: rgba(255,255,255,0.95);
+
+border-radius:25px;
+
+padding:40px;
+
 max-width:600px;
-padding:30px;
-border-radius:12px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
-}
 
-.cardapio h2{
-text-align:center;
-margin-bottom:20px;
-}
-
-#cardapio-lista p{
-padding:8px;
-border-bottom:1px solid #eee;
-}
-
-footer{
-text-align:center;
-padding:20px;
-opacity:0.6;
-
-}
-
-.cardapio{
-background: linear-gradient(135deg,#ffffff,#f7f7f7);
 margin:40px auto;
-max-width:600px;
-padding:35px;
-border-radius:16px;
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
-text-align:center;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,0.35);
+
+backdrop-filter: blur(10px);
 }
 
 .cardapio h2{
 font-size:26px;
 margin-bottom:25px;
 color:#333;
+text-align:center;
 }
+
+/* LISTA CARDÁPIO */
 
 #cardapio-lista{
 display:flex;
@@ -155,18 +208,32 @@ gap:12px;
 
 #cardapio-lista p{
 background:white;
+
 padding:12px 15px;
+
 border-radius:10px;
+
 font-size:17px;
+
 box-shadow:0 4px 10px rgba(0,0,0,0.08);
+
 transition:0.2s;
 }
 
 #cardapio-lista p:hover{
 transform:translateX(5px);
+
 background:#fff8e6;
 }
 
+/* FOOTER */
 
+footer{
+text-align:center;
 
+padding:20px;
 
+opacity:0.6;
+
+color:white;
+}
