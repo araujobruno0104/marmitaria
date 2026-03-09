@@ -4,104 +4,69 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Marmitaria Sabor Caseiro</title>
 
 <link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<header class="header">
+<header class="topo">
 
-<h1 id="nome-restaurante">Marmitaria Sabor Caseiro</h1>
-<p id="slogan">Comida caseira feita com carinho</p>
+<h1>Marmitaria Sabor Caseiro</h1>
+<p>Comida caseira feita com carinho</p>
 
 </header>
 
-
 <main class="container">
 
-<!-- PRATO DO DIA -->
+<div class="card">
 
-<section class="card prato">
+<h2>⭐ Prato do Dia</h2>
 
-<h2 class="titulo">
-⭐ <span id="titulo-prato">Prato do Dia</span>
-</h2>
+<img src="prato.jpg" class="foto">
 
-<img
-id="imagem-prato"
-class="imagem-prato"
-src=""
-alt="Prato do dia"
->
+<p>O prato de hoje é uma delícia:</p>
 
-<div class="descricao">
-
-<p id="descricao-prato"></p>
-
-<ul id="lista-ingredientes">
-<!-- JS PREENCHE -->
-</ul>
+<ul id="cardapio"></ul>
 
 </div>
 
-</section>
 
-
-<!-- TAMANHOS -->
-
-<section class="card tamanhos">
+<div class="card tamanhos">
 
 <h3>🍱 Escolha o Tamanho</h3>
 
-<div id="lista-tamanhos">
-
-<!-- JS ADICIONA -->
-
-<div class="item">
+<div class="linha">
 <span>Pequena</span>
 <b>R$ 16</b>
 </div>
 
+<div class="linha">
+<span>Média</span>
+<b>R$ 20</b>
 </div>
 
-</section>
+<div class="linha">
+<span>Grande</span>
+<b>R$ 25</b>
+</div>
+
+</div>
 
 
-<!-- BOTÃO WHATSAPP -->
-
-<a
-id="botao-whatsapp"
-class="botao"
-href="#"
-target="_blank"
->
-
+<a class="botao" href="https://wa.me/5599999999999">
 📲 Pedir pelo WhatsApp
-
 </a>
-
 
 </main>
 
+<footer>
 
-<footer class="footer">
-
-<p id="endereco">
-Rua Exemplo, 123
-</p>
-
-<p id="horario">
-Aberto das 11h às 14h
-</p>
+Rua Exemplo, 123 • Aberto das 11h às 14h
 
 </footer>
-
 
 <script src="script.js"></script>
 
