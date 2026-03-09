@@ -1,75 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marmitaria</title>
+
+<title>Marmitaria Sabor Caseiro</title>
 
 <link rel="stylesheet" href="style.css">
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-<header>
-<h1>Marmitaria Sabor Caseiro</h1>
+<header class="header">
+
+<h1 id="nome-restaurante">Marmitaria Sabor Caseiro</h1>
+<p id="slogan">Comida caseira feita com carinho</p>
+
 </header>
 
 
-<section class="marmitas">
+<main class="container">
 
-<div class="card">
-<img src="img/marmitap.jpg" alt="">
-<h2>Marmita Pequena</h2>
-<p class="preco">R$ 15,00</p>
+<!-- PRATO DO DIA -->
 
-<a href="https://wa.me/5599999999999?text=Olá%20quero%20uma%20marmita%20pequena">
-<button>Pedir no WhatsApp</button>
-</a>
-</div>
+<section class="card prato">
 
+<h2 class="titulo">
+⭐ <span id="titulo-prato">Prato do Dia</span>
+</h2>
 
-<div class="card destaque">
-<img src="img/marmitam.jpg" alt="">
-<h2>Marmita Média</h2>
-<p class="preco">R$ 18,00</p>
+<img
+id="imagem-prato"
+class="imagem-prato"
+src=""
+alt="Prato do dia"
+>
 
-<a href="https://wa.me/5599999999999?text=Olá%20quero%20uma%20marmita%20media">
-<button>Pedir no WhatsApp</button>
-</a>
-</div>
+<div class="descricao">
 
+<p id="descricao-prato"></p>
 
-<div class="card">
-<img src="img/marmitag.jpg" alt="">
-<h2>Marmita Grande</h2>
-<p class="preco">R$ 22,00</p>
+<ul id="lista-ingredientes">
+<!-- JS PREENCHE -->
+</ul>
 
-<a href="https://wa.me/5599999999999?text=Olá%20quero%20uma%20marmita%20grande">
-<button>Pedir no WhatsApp</button>
-</a>
 </div>
 
 </section>
 
 
+<!-- TAMANHOS -->
 
-<section class="cardapio">
+<section class="card tamanhos">
 
-<h2>🍛 Cardápio do Dia</h2>
+<h3>🍱 Escolha o Tamanho</h3>
 
-<div id="cardapio-lista">
-Carregando cardápio...
+<div id="lista-tamanhos">
+
+<!-- JS ADICIONA -->
+
+<div class="item">
+<span>Pequena</span>
+<b>R$ 16</b>
+</div>
+
 </div>
 
 </section>
 
 
-<footer>
-<p>Pedidos pelo WhatsApp</p>
+<!-- BOTÃO WHATSAPP -->
+
+<a
+id="botao-whatsapp"
+class="botao"
+href="#"
+target="_blank"
+>
+
+📲 Pedir pelo WhatsApp
+
+</a>
+
+
+</main>
+
+
+<footer class="footer">
+
+<p id="endereco">
+Rua Exemplo, 123
+</p>
+
+<p id="horario">
+Aberto das 11h às 14h
+</p>
+
 </footer>
+
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
