@@ -1,4 +1,4 @@
-const url = "https://docs.google.com/spreadsheets/d/1Hx3dTYEZOj1SKSN0xcS53rLto4TnaITdWaZW4h3Hqds/edit?usp=drivesdk";
+const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS2Hrk6JB9O2XjayjzREDISWzAf_lSxUm5vtiyES8oXK97ge9iocYqqhNgIu1pkh5NkEA724gI6HKLb/pub?output=csv";
 
 fetch(url)
 .then(res => res.text())
@@ -22,3 +22,4 @@ html += `<p>• ${item}</p>`;
 document.getElementById("cardapio-lista").innerHTML = html;
 
 });
+
