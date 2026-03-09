@@ -1,4 +1,4 @@
-const url = "https://docs.google.com/spreadsheets/d/1Hx3dTYEZOj1SKSN0xcS53rLto4TnaITdWaZW4h3Hqds/edit?usp=drivesdk";
+const url = "COLE_AQUI_O_LINK_CSV";
 
 fetch(url)
 .then(res => res.text())
@@ -8,13 +8,16 @@ const linhas = data.split("\n");
 
 let html = "";
 
-linhas.forEach(item => {
+// começa do 1 para pular o cabeçalho
+for(let i = 1; i < linhas.length; i++){
 
-if(item.trim() !== ""){
+const item = linhas[i].trim();
+
+if(item !== ""){
 html += `<p>• ${item}</p>`;
 }
 
-});
+}
 
 document.getElementById("cardapio-lista").innerHTML = html;
 
