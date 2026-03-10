@@ -7,7 +7,6 @@ font-family: Arial, Helvetica, sans-serif;
 
 body{
 background:#e8dcc8;
-display:block;
 }
 
 /* CONTAINER PRINCIPAL */
@@ -16,6 +15,7 @@ display:block;
 width:100%;
 max-width:420px;
 margin:0 auto;
+padding-top:90px; /* espaço para o header fixo */
 padding-bottom:90px;
 }
 
@@ -40,8 +40,10 @@ z-index:1000;
 box-shadow:0 4px 10px rgba(0,0,0,0.25);
 }
 
+/* LOGO */
+
 .logo{
-height:40px;
+max-height:40px;  /* controla tamanho da logo */
 width:auto;
 display:block;
 }
