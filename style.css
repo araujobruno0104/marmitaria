@@ -22,10 +22,31 @@ padding-bottom:40px;
 /* HEADER */
 
 .topo{
+
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+
 background:#8b1e1e;
-color:white;
-text-align:center;
-padding:20px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+height:70px;
+
+z-index:1000;
+
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+
+}
+
+.logo{
+
+height:40px;
+width:auto;
+
 }
 
 /* CARDS */
